@@ -45,10 +45,7 @@
     --ring: 280 70% 65%;
 
     /* Gradientes místicos */
-   --gradient-primary: linear-gradient(135deg, hsl(280 70% 65%), hsl(260 80% 55%));
-   --gradient-secondary: linear-gradient(180deg, hsl(270 50% 25%), hsl(260 40% 15%));
-   --gradient-golden: linear-gradient(45deg, hsl(45 95% 70%), hsl(35 90% 65%));
-   --gradient-ethereal: linear-gradient(135deg, hsl(280 60% 20%), hsl(260 50% 15%));
+    background: linear-gradient(to right, #C33764, #1D2671);
 
     /* Sombras mágicas */
     --shadow-mystical: 0 10px 30px -5px hsl(280 70% 20% / 0.5);
