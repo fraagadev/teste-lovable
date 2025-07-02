@@ -7,7 +7,7 @@
 @layer base {
   :root {
     /* Fundo místico - gradiente escuro */
-    --background: 97 242 194;
+    --background: 260 30% 8%;
     --foreground: 280 15% 95%;
 
     /* Cards com toque etéreo */
