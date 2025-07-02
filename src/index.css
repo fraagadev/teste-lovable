@@ -7,7 +7,7 @@
 @layer base {
   :root {
     /* Fundo místico - gradiente escuro */
-    --background: 97 242% 194%;
+    --background: 97 242 194;
     --foreground: 280 15% 95%;
 
     /* Cards com toque etéreo */
@@ -19,7 +19,7 @@
     --popover-foreground: 280 15% 95%;
 
     /* Cores primárias - roxo mágico */
-    --primary: 97 242% 194%;
+    --primary: 97 242 194;
     --primary-foreground: 280 15% 95%;
     --primary-glow: 280 80% 75%;
 
