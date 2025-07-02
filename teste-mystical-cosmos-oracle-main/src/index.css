@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system místico e esotérico - cores HSL */
+
+@layer base {
+  :root {
+    /* Fundo místico - gradiente escuro */
+    --background: 260 5.3% 8%;
+    --foreground: 280 15% 95%;
+
+    /* Cards com toque etéreo */
+    --card: 260 25% 12%;
+    --card-foreground: 280 15% 95%;
+
+    /* Popover místico */
+    --popover: 260 25% 12%;
+    --popover-foreground: 280 15% 95%;
+
+    /* Cores primárias - roxo mágico */
+    --primary: 280 70% 65%;
+    --primary-foreground: 280 15% 95%;
+    --primary-glow: 280 80% 75%;
+
+    /* Cores secundárias - lilás suave */
+    --secondary: 270 50% 25%;
+    --secondary-foreground: 280 15% 95%;
+
+    /* Cores suaves */
+    --muted: 260 20% 20%;
+    --muted-foreground: 270 10% 65%;
+
+    /* Accent dourado místico */
+    --accent: 45 95% 70%;
+    --accent-foreground: 260 30% 8%;
+
+    /* Cores destrutivas */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 280 15% 95%;
+
+    /* Bordas e inputs */
+    --border: 270 30% 25%;
+    --input: 270 30% 25%;
+    --ring: 280 70% 65%;
+
+    /* Gradientes místicos */
+    --gradient-primary: linear-gradient(135deg, hsl(280 70% 65%), hsl(260 80% 55%));
+    --gradient-secondary: linear-gradient(180deg, hsl(270 50% 25%), hsl(260 40% 15%));
+    --gradient-golden: linear-gradient(45deg, hsl(45 95% 70%), hsl(35 90% 65%));
+    --gradient-ethereal: linear-gradient(135deg, hsl(280 60% 20%), hsl(260 50% 15%));
+
+    /* Sombras mágicas */
+    --shadow-mystical: 0 10px 30px -5px hsl(280 70% 20% / 0.5);
+    --shadow-glow: 0 0 30px hsl(280 70% 65% / 0.3);
+    --shadow-golden: 0 5px 20px hsl(45 95% 70% / 0.4);
+
+    /* Animações suaves */
+    --transition-magical: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.3s ease-in-out;
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-ethereal);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Animações místicas */
+  .mystical-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .floating {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .spin-magical {
+    animation: spinMagical 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .card-flip {
+    animation: cardFlip 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  /* Botões místicos */
+  .btn-mystical {
+    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground;
+    @apply shadow-lg hover:shadow-mystical transform hover:scale-105;
+    @apply transition-all duration-300 rounded-full px-8 py-3 font-semibold;
+    @apply border border-primary/30;
+  }
+
+  .btn-golden {
+    background: var(--gradient-golden);
+    @apply text-accent-foreground shadow-golden hover:shadow-lg;
+    @apply transform hover:scale-105 transition-all duration-300;
+    @apply rounded-full px-6 py-2 font-semibold;
+  }
+
+  /* Cards místicos */
+  .card-mystical {
+    @apply bg-card/90 backdrop-blur-sm border border-border/50;
+    @apply rounded-2xl p-6 shadow-mystical;
+    background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+  }
+
+  /* Efeitos de texto */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-golden {
+    background: var(--gradient-golden);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  .shadow-mystical {
+    box-shadow: var(--shadow-mystical);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-golden {
+    box-shadow: var(--shadow-golden);
+  }
+}
+
+/* Keyframes para animações */
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 10px hsl(var(--primary) / 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 20px hsl(var(--primary) / 0.8));
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spinMagical {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes cardFlip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg) scale(1.1);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
