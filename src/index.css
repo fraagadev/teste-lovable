@@ -45,7 +45,7 @@
     --ring: 280 70% 65%;
 
     /* Gradientes místicos */
-    background: linear-gradient(to right, #C33764, #1D2671);
+    background: linear-gradient(45deg, #C33764, #1D2671);
 
     /* Sombras mágicas */
     --shadow-mystical: 0 10px 30px -5px hsl(280 70% 20% / 0.5);
