@@ -95,7 +95,7 @@ export const Planos: React.FC = () => {
       </div>
 
       {/* Título */}
-      <div className="text-center mb-12 relative z-10">
+      <div className="text-center mb-12>
         <h1 className="text-4xl md:text-6xl font-mystical text-gradient mb-4">
           ✨ Planos Místicos
         </h1>
